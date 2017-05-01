@@ -38,7 +38,10 @@ h1{
     color:#414141;
     margin-bottom:0;
     letter-spacing: 5px;
-    margin-left: 5vw;
+    /*margin-left: 5vw;*/
+    margin-left:-5vw !important;
+    transition: all 0.5s;
+    opacity:0;
 }
 h2{
     font-family:"raleway-bold";
@@ -62,6 +65,11 @@ div{
 .drawAnim{
     /*display:none;*/
 }
+.Ovp{
+    margin-left: 5vw !important;
+    opacity: 1;
+    transition: all 0.5s;
+}
 /*----------------------
 ---------HEADER---------
 -----------------------*/
@@ -72,6 +80,7 @@ header{
     top:0;
     z-index:10;
     transition: all 0.5s;
+    background:#fff;
 }
 #logo{
     background: url('img/LogoGicram-Fond-transp-705x191.png') no-repeat;
@@ -132,6 +141,7 @@ ul.first-menu{
     border-right: 1px solid;
     padding-right: 2vw;
     transition: all 0.5s;
+    margin-top:0;
 }
 li{
     font-size:10px;
@@ -140,7 +150,7 @@ li{
     letter-spacing: 0.5px;
     font-family: "raleway-bold";
     list-style: none;
-    line-height: 2em;
+    line-height: 1.7em;
 }
 li ul{
     position: absolute;
@@ -151,7 +161,13 @@ li ul{
 li ul li{
         text-align: left;
 }
-
+.drawAnim{
+    width: 335px;
+    height: 70px;
+    position: absolute;
+    left: 50vw;
+    margin-top: 5vh;
+}
 /*----------------------
 --------SECTION-1-------
 -----------------------*/
@@ -205,10 +221,10 @@ section.section-intro{
 }
 #marteau-warper{
     /*width:364px;*/
-    width:552px;
+    /*width:552px;
     height:165px;
     position:absolute;
-    left:30vw;
+    left:30vw;*/
     /*margin-top:5vh;*/
 }
 /*----------------------
@@ -277,6 +293,7 @@ section.section-intro{
 /*----------------------
 --------SECTION-4-------
 -----------------------*/
+
 section.section-actualite{
     background: #B8B8B8;
 }
@@ -286,6 +303,7 @@ section.section-actualite{
     position:absolute;
     left:30vw;
 }
+
 /*----------------------
 --------SECTION-5-------
 -----------------------*/
@@ -299,11 +317,27 @@ section.section-actualite{
 }
 .pic1{
     background:url('img/actu1.jpg');
-    background-size: cover;
+    /*background-size: cover;*/
+    background-size: 100% 100%;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    background-position: center center;
+}
+.pic1:hover{
+    background-size: 120% 120%;
 }
 .pic2{
     background:url('img/actu2.jpg');
-    background-size: cover;
+    /*background-size: cover;*/
+    background-size: 100% 100%;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    background-position: center center;
+}
+.pic2:hover{
+    background-size: 120% 120%;
 }
 .gris1{
     background: rgb(184,184,184);
@@ -377,7 +411,8 @@ div.textW{
 .textW p{
     color:#fff;
     font-family: "raleway-light";
-    font-size:14px;
+    /*font-size:14px;*/
+    font-size:1.05vw;
     letter-spacing: 1px;
 }
 /*----BLACK-----*/
@@ -423,11 +458,20 @@ div.textW{
     transform: rotate(360deg);
 }
 
-/*
-.plusB:hover .verticB{
-    transform: rotate(90deg);
+
+/*----------------------
+--------SECTION-6-------
+-----------------------*/
+section.section-actualite{
+    background: #B8B8B8;
 }
-.plusB:hover .horizB{
-    transform: rotate(360deg);
+#oeil-warper{
+    /*width:552px;
+    height:165px;*/
+    width: 335px;
+    height: 70px;
+    position: absolute;
+    left: 50vw;
+    margin-top: 5vh;
 }
-*/
+

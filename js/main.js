@@ -15,6 +15,7 @@ $(document).ready(function() {
       var delay = false;
 
       $(document).on('mousewheel DOMMouseScroll', function(event) {
+
         if($(window).scrollTop() < 6*h){
           event.preventDefault();
           if (delay) return;
@@ -58,15 +59,41 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
-
-    $(window).scroll(function(event) {
-
+    
+    $(window).scroll(function(event) {  
+        
+        //H1 ANIMATION
+        if ($('#title_1').isOnScreen()) {
+            
+            $("#title_1").delay(800).addClass('Ovp');
+             console.log('this: '+ this);
+        } else {
+            $("#title_1").removeClass('Ovp');
+        }
+        
+         if ($('#title_2').isOnScreen()) {
+            
+            $("#title_2").delay(800).addClass('Ovp');
+             console.log('this: '+ this);
+        } else {
+            $("#title_2").removeClass('Ovp');
+        }
+        
+         if ($('#title_3').isOnScreen()) {
+            
+            $("#title_3").delay(800).addClass('Ovp');
+             console.log('this: '+ this);
+        } else {
+            $("#title_3").removeClass('Ovp');
+        }
+        
          didScroll = true;
 
         h = $(window).height();
         scroll = $(window).scrollTop();
 
         if (scroll >=h) {
+
 
             new Vivus('marteau', { start: 'autostart', type: 'delayed', duration: 100});
         }
@@ -91,7 +118,11 @@ var navbarHeight = $('header').outerHeight();
             // width: '70vw', opacity:'0'
             // }, 500, "easeInCubic");
             // });
+        
+            //new Vivus('marteau', { start: 'inViewport', type: 'delayed', duration: 100});
+            new Vivus('marteau', { start: 'autostart', type: 'delayed', duration: 100});
         }
+
 
         if (scroll >= h*3){
              new Vivus('bouche', { start: 'autostart', type: 'delayed', duration: 100});
@@ -126,10 +157,12 @@ var navbarHeight = $('header').outerHeight();
         if(st + $(window).height() < $(document).height()) {
             /*$('header').removeClass('nav-up').addClass('nav-down');
             $('#logo').removeClass('logo-up').addClass('logo-down');*/
-            $('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
-            $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');
 
-
+            /*$('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
+            $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');*/
+         
+            
+            
 
         }
     }
@@ -143,6 +176,7 @@ var navbarHeight = $('header').outerHeight();
 -------------SLIDER-----------
 ------------------------------
 */
+
 
   $(".arrows").click(function(){
 
@@ -179,3 +213,32 @@ var navbarHeight = $('header').outerHeight();
 
 
 });
+
+
+    
+
+
+/*
+------------------------------
+--------IS-ON-VIEWPORT--------
+------------------------------
+*/    
+$.fn.isOnScreen = function(){
+    
+    var win = $(window);
+    
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+    
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+    
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+    
+};    
+
