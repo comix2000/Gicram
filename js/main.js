@@ -60,39 +60,46 @@ var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
 
-    
-    $(window).scroll(function(event) {  
-        
+
+    $(window).scroll(function(event) {
+
         //H1 ANIMATION
-        if ($('#title_1').isOnScreen()) {
-            
+        if ($('#title_1').isOnScreen()){
+
             $("#title_1").delay(800).addClass('Ovp');
              console.log('this: '+ this);
         } else {
             $("#title_1").removeClass('Ovp');
         }
-        
+
          if ($('#title_2').isOnScreen()) {
-            
+
             $("#title_2").delay(800).addClass('Ovp');
              console.log('this: '+ this);
         } else {
             $("#title_2").removeClass('Ovp');
         }
-        
+
          if ($('#title_3').isOnScreen()) {
-            
+
             $("#title_3").delay(800).addClass('Ovp');
              console.log('this: '+ this);
         } else {
             $("#title_3").removeClass('Ovp');
         }
-        
+
 
          didScroll = true;
 
         h = $(window).height();
         scroll = $(window).scrollTop();
+
+        scrolled = false;
+        if(scroll >= 2*h && !scrolled){
+          $(".arrow-next").click();
+          console.log("shol");
+          scrolled = true;
+        }
 
         if (scroll >=h) {
 
@@ -158,9 +165,6 @@ var navbarHeight = $('header').outerHeight();
 
             $('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
             $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');
-
-
-
         }
     }
 
@@ -188,6 +192,14 @@ var navbarHeight = $('header').outerHeight();
       nextSlide = (direction == "left" ? ancestor.children(".slides:first-child") : ancestor.children(".slides:last") )
     }
 
+// Uncomment cette partie la \/ 
+    // activedSlide.children(".slider-infos").textillate({
+    //   // ton effect fadeOut
+    // });
+    // nextSlide.children(".slider-infos").textillate({
+    //   // ton effect fadeIn
+    // });
+
     activedSlide.children(".slide-image").css({
       backgroundPositionX :direction,
       float : direction
@@ -214,22 +226,22 @@ var navbarHeight = $('header').outerHeight();
 ------------------------------
 --------IS-ON-VIEWPORT--------
 ------------------------------
-*/    
-$.fn.isOnScreen = function(){
-    
-    var win = $(window);
-    
-    var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
-    };
-    viewport.right = viewport.left + win.width();
-    viewport.bottom = viewport.top + win.height();
-    
-    var bounds = this.offset();
-    bounds.right = bounds.left + this.outerWidth();
-    bounds.bottom = bounds.top + this.outerHeight();
-    
-    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-    
-};   
+*/
+// $.fn.isOnScreen = function(){
+//
+//     var win = $(window);
+//
+//     var viewport = {
+//         top : win.scrollTop(),
+//         left : win.scrollLeft()
+//     };
+//     viewport.right = viewport.left + win.width();
+//     viewport.bottom = viewport.top + win.height();
+//
+//     var bounds = this.offset();
+//     bounds.right = bounds.left + this.outerWidth();
+//     bounds.bottom = bounds.top + this.outerHeight();
+//
+//     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+//
+// };

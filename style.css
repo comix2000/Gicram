@@ -246,6 +246,7 @@ section.section-intro{
 .slider-infos{
     position: relative;
     opacity:1;
+    display:  none;
 }
 .slide-image{
     width: 0vw;
@@ -256,6 +257,9 @@ section.section-intro{
 }
 .actived-slide .slide-image{
     width: 70vw;
+}
+.actived-slide .slider-infos{
+    display: block;
 }
 /*SLIDER CONTROLS*/
 .arrows{
