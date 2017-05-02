@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    
+
     //$('.section-intro h1').delay(4000).fadeIn(1000);
-    $('.titleintro').textillate({ 
+    $('.titleintro').textillate({
       in: { effect: 'async'
           }
     });
-    
+
 /*
 ------------------------------
 --------FORCED--SCROLL--------
@@ -45,7 +45,7 @@ $(document).ready(function() {
         }
       });
   })();
-    
+
 /*
 ------------------------------
 ---------SCROLL-EVENTS--------
@@ -53,12 +53,13 @@ $(document).ready(function() {
 */
 var h=0;
 var scroll =0;
-    
-//HEADER EVENT ON SCROLL    
+
+//HEADER EVENT ON SCROLL
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
+
     
     $(window).scroll(function(event) {  
         
@@ -87,59 +88,59 @@ var navbarHeight = $('header').outerHeight();
             $("#title_3").removeClass('Ovp');
         }
         
+
          didScroll = true;
-        
+
         h = $(window).height();
         scroll = $(window).scrollTop();
-        
+
         if (scroll >=h) {
-        
-            //new Vivus('marteau', { start: 'inViewport', type: 'delayed', duration: 100});
+
+
             new Vivus('marteau', { start: 'autostart', type: 'delayed', duration: 100});
         }
         if (scroll >= h*2){
-            
-            $('.slider-infos').animate({
-                marginTop:'0',
-                opacity:'1'
-            },1000);
-            
-            /*$('.slides:first-child .slide-image').animate({
-                width: '100%'
-            }, 500,"easeInCubic");*/
-            
-            $('.arrows').delay(1500).fadeIn();
-            
-            
-            //ARROWS EVENTS
-            $('.slides:first-child .next').click(function(){
-            $('.slides:first-child').animate({ width:'0', opacity:'0'},500,"easeInCubic");
-        
-            $('.slides:nth-child(2)').delay(1000).animate({
-            width: '70vw', opacity:'0'
-            }, 500, "easeInCubic");
-            });
+
+            // $('.slider-infos').animate({
+            //     marginTop:'0',
+            //     opacity:'1'
+            // },1000);
+            // $('.slides:first-child .slide-image').animate({
+            //     width: '100%'
+            // }, 500,"easeInCubic");
+            //
+            // $('.arrows').delay(1500).fadeIn();
+            //
+            //
+            // //ARROWS EVENTS
+            // $('.slides:first-child .next').click(function(){
+            // $('.slides:first-child').animate({ width:'0', opacity:'0'},500,"easeInCubic");
+            //
+            // $('.slides:nth-child(2)').delay(1000).animate({
+            // width: '70vw', opacity:'0'
+            // }, 500, "easeInCubic");
+            // });
         }
-        
+
         if (scroll >= h*3){
              new Vivus('bouche', { start: 'autostart', type: 'delayed', duration: 100});
         }
-        
+
         if (scroll >= h*5){
              new Vivus('oeil', { start: 'autostart', type: 'delayed', duration: 100});
         }
     });
-    
+
     setInterval(function() {
     if (didScroll) {
         hasScrolled();
         didScroll = false;
     }
 }, 250);
-    
+
     function hasScrolled() {
     var st = $(this).scrollTop();
-    
+
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
 
@@ -154,26 +155,59 @@ var navbarHeight = $('header').outerHeight();
         if(st + $(window).height() < $(document).height()) {
             /*$('header').removeClass('nav-up').addClass('nav-down');
             $('#logo').removeClass('logo-up').addClass('logo-down');*/
-            /*$('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
-            $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');*/
-         
-            
-            
+
+            $('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
+            $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');
+
+
+
         }
     }
-    
+
     lastScrollTop = st;
 }
-    
-        
+
+
 /*
 ------------------------------
 -------------SLIDER-----------
 ------------------------------
 */
 
+  $(".arrows").click(function(){
 
-    
+    direction = $(this).data("direction");
+    reverseSide = (direction == "left" ? "right" : "left");
+
+    ancestor = $(this).parent(".slideshow-container");
+    activedSlide = ancestor.children(".actived-slide");
+
+    nextSlide = (direction == "left" ? activedSlide.next(".slides") : activedSlide.prev(".slides") );
+    if(nextSlide.length === 0){
+
+      nextSlide = (direction == "left" ? ancestor.children(".slides:first-child") : ancestor.children(".slides:last") )
+    }
+
+    activedSlide.children(".slide-image").css({
+      backgroundPositionX :direction,
+      float : direction
+    }).animate({
+      width : "0vw"
+    },300,function(){
+      nextSlide.children(".slide-image").css({
+        backgroundPositionX : reverseSide,
+        float : reverseSide
+      }).animate({
+        width : "70vw"
+      },300,function(){
+        activedSlide.removeClass("actived-slide");
+        nextSlide.addClass("actived-slide");
+      })
+    })
+
+  })
+
+
 });
 
 /*
@@ -198,4 +232,4 @@ $.fn.isOnScreen = function(){
     
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     
-};    
+};   

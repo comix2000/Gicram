@@ -113,7 +113,7 @@ header{
     display: block;
 }
 .second-menu-up{
-    display: block !important;  
+    display: block !important;
 }
 .second-menu-down{
     display: none;
@@ -136,7 +136,7 @@ nav{
     z-index:9;
 }
 ul.first-menu{
-    position: absolute; 
+    position: absolute;
     width:10vw;
     border-right: 1px solid;
     padding-right: 2vw;
@@ -156,7 +156,7 @@ li ul{
     position: absolute;
     width: 10vw;
     margin-left: 11vw;
-    
+
 }
 li ul li{
         text-align: left;
@@ -233,63 +233,48 @@ section.section-intro{
 .section-dernieres-operations-slider{
     background:#eee;
 }
-div.slides{
-    width: 70vw;
+.slideshow-container{
+  position: relative;
+  width: 100%;
+  height: calc(37.3vw + 128px); /* 128px la hauteur externe du slider-infos */
 }
 .slides{
     position: absolute;
-    display: none;
-    /*opacity:0;*/ 
-}
-.slides:first-of-type{
-    display: block;
-    opacity:1;
+    height: 37.3vw;
+    width: 82vw;
 }
 .slider-infos{
-    margin-top:100px;
     position: relative;
-    opacity:0;  
+    opacity:1;
 }
 .slide-image{
-    width:0;
+    width: 0vw;
     height: 37.3vw;
-    /*margin-top: 5vh;*/
-    transition: all 0.5s;
-    margin-left:6vw;
-}
-.not-active{
-    width:0;
-    display: none;
-}
-#img1{
-    background: url('img/img_1.jpg');
     background-size: cover;
-}
-#img2{
-    background: url('img/img_2.jpg');
-    background-size: cover;
-}
-.slides img{
-    /*width: 100%;*/
     margin-left: 6vw;
+    margin-right: 6vw;
+}
+.actived-slide .slide-image{
+    width: 70vw;
 }
 /*SLIDER CONTROLS*/
 .arrows{
-    width:118px;
-    height:118px;
+    width:18px;
+    height:18px;
     position:absolute;
-    top:50vh;
-    transform: translateY(-50%);
-    transform: -webkit-translateY(-50%);
-    display: none;
+    bottom: calc(18.65vw - 9px);
+      /* la valeur absolue pour height/2 */
+      /* la valeur relative pour (slide-image)height/2 */
+    background-size: cover;
+    cursor: pointer;
 }
-.prev{
-    background: url('img/prev.png') no-repeat;
-    left:-20px;
+.arrow-prev{
+    background-image: url('img/prev.png');
+    left: 5px;
 }
-.next{
-   background: url('img/next.png') no-repeat;
-   right: -90px;
+.arrow-next{
+   background-image: url('img/next.png');
+   right: 5px;
 }
 .dot {
   cursor:pointer;
@@ -309,6 +294,15 @@ div.slides{
 --------SECTION-4-------
 -----------------------*/
 
+section.section-actualite{
+    background: #B8B8B8;
+}
+#oeil-warper{
+    width:552px;
+    height:165px;
+    position:absolute;
+    left:30vw;
+}
 /*----------------------
 --------SECTION-5-------
 -----------------------*/
@@ -471,7 +465,6 @@ div.textW{
     transform: rotate(360deg);
 }
 */
-
 /*----------------------
 --------SECTION-6-------
 -----------------------*/
