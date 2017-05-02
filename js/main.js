@@ -59,6 +59,10 @@ var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('header').outerHeight();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/slider
     
     $(window).scroll(function(event) {  
         
@@ -88,6 +92,10 @@ var navbarHeight = $('header').outerHeight();
             $("#title_3").removeClass('Ovp').dequeue();
         }
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/slider
          didScroll = true;
 
         h = $(window).height();
@@ -119,9 +127,12 @@ var navbarHeight = $('header').outerHeight();
             // width: '70vw', opacity:'0'
             // }, 500, "easeInCubic");
             // });
+<<<<<<< HEAD
         
             //new Vivus('marteau', { start: 'inViewport', type: 'delayed', duration: 100});
             new Vivus('marteau', { start: 'autostart', type: 'delayed', duration: 100});
+=======
+>>>>>>> origin/slider
         }
 
 
@@ -159,12 +170,20 @@ var navbarHeight = $('header').outerHeight();
             /*$('header').removeClass('nav-up').addClass('nav-down');
             $('#logo').removeClass('logo-up').addClass('logo-down');*/
 
+<<<<<<< HEAD
             /*$('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
             $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');*/
          
             
             
 
+=======
+            $('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
+            $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');
+
+
+
+>>>>>>> origin/slider
         }
     }
 
@@ -197,7 +216,10 @@ $('#second-menu').click(function(){
 ------------------------------
 */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/slider
   $(".arrows").click(function(){
 
     direction = $(this).data("direction");
@@ -255,10 +277,13 @@ $('#second-menu').click(function(){
 
 });
 
+<<<<<<< HEAD
 
     
 
 
+=======
+>>>>>>> origin/slider
 /*
 ------------------------------
 --------IS-ON-VIEWPORT--------
@@ -281,5 +306,9 @@ $.fn.isOnScreen = function(){
     
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
     
+<<<<<<< HEAD
 };    
 
+=======
+};   
+>>>>>>> origin/slider

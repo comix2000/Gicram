@@ -315,7 +315,10 @@ section.section-actualite{
     position:absolute;
     left:30vw;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/slider
 /*----------------------
 --------SECTION-5-------
 -----------------------*/
@@ -566,6 +569,7 @@ div.textB{
     background-size: cover;
     background-position: center;
 }
+<<<<<<< HEAD
 
 .plusClose{
     width:32px;
@@ -608,6 +612,9 @@ div.textB{
 .plusClose:hover .horizClose{
  transform: rotate(315deg);
 }
+=======
+*/
+>>>>>>> origin/slider
 /*----------------------
 --------SECTION-6-------
 -----------------------*/
@@ -623,4 +630,7 @@ section.section-actualite{
     left: 50vw;
     margin-top: 5vh;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/slider
