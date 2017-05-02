@@ -76,7 +76,7 @@ div{
 header{
     position: fixed;
     width: 100vw;
-    height:20vh;
+    height: 22vh;
     top:0;
     z-index:10;
     transition: all 0.5s;
@@ -107,10 +107,12 @@ header{
     top:20px !important;
 }
 .first-menu-up{
-    display: none;
+    top:-1000px;
+    /*display: none;*/
 }
 .first-menu-down{
-    display: block;
+    top:0;
+    /*display: block;*/
 }
 .second-menu-up{
     display: block !important;
@@ -126,12 +128,12 @@ nav{
 }
 #second-menu{
     display: none;
-    width:32px;
-    height:32px;
+    width:60px;
+    height:60px;
     position: absolute;
     top:10px;
-    right:20px;
-    background:url('img/autre-21.png');
+    right:10px;
+    background:url('img/menu.svg');
     background-size:cover;
     z-index:9;
 }
@@ -322,7 +324,8 @@ section.section-actualite{
     height:20.5vw;
     display: inline-block;
     margin:-2px;
-    background:rgb(176,130,27);
+    /*background:rgb(176,130,27);*/
+    background:#005249;
     position: relative;
 }
 .pic1{
@@ -357,6 +360,16 @@ section.section-actualite{
 }
 .section-temoin .slide-image{
 position:relative;
+}
+.txt-big{
+  width: 90%;
+position: absolute;
+padding-left: 10%;
+}
+.txt-big p{
+    color: #fff;
+font-family: "raleway-bold";
+font-size: 55px;
 }
 /*----QUOTES----*/
 .quotes{
@@ -467,6 +480,39 @@ div.textW{
     top: 25%;
     transition: all 0.5s;
 }
+
+.dateB{
+    position: absolute;
+    top:10px;
+    left:20px;
+}
+.dateB p{
+    color:#000;
+    font-family: "raleway-light";
+    font-size:14px;
+    letter-spacing: 1px;
+}
+h6.titleB{
+    color: #000;
+    font-family: "raleway-bold";
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+div.textB{
+    position: absolute;
+    left: 20px;
+    top: 75px;
+    width: 80%;
+}
+.textB p{
+    color:#000;
+    font-family: "raleway-light";
+    /*font-size:14px;*/
+    font-size:1.05vw;
+    letter-spacing: 1px;
+}
+
 .actu-warper:hover .verticB{
     transform: rotate(90deg);
 }
@@ -480,7 +526,88 @@ div.textW{
     transform: rotate(360deg);
 }
 
+/*------OVERLAY--------*/
+#overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background: rgba(255,255,255,0.95);
+    display: none;
+    z-index: 11;
+    overflow: scroll;
+}
+#overlay-container{
+    width:82vw;
+    padding-left:9vw;
+    padding-right: 9vw;
+}
+.overlay-date{
+    font-family: "raleway-bold";
+    font-size: 25px;
+    color:#000;
+}
+.overlay-title{
+    font-family: "raleway-bold";
+    font-size: 25px;
+    color:#000;
+}
+.overlay-txt{
+    font-family: "raleway-light";
+    font-size: 15px;
+    color:#000; 
+}
+#overlay-img{
+    width:100%;
+    height:50vh;
+    position: relative;
+    background: url('img/actu1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
+.plusClose{
+    width:32px;
+    height:32px;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.horizClose{
+    width:32px;
+    height:4px;
+    background:#000;
+  -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    transform: -webkit-rotate(45deg);
+    top: 38%;
+    position: relative;
+    transition: all 0.5s;
+}
+.verticClose{
+    width:32px;
+    height:4px;
+    background:#000;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    transform: rotate(-45deg);
+    transform: -webkit-rotate(-45deg);
+    position: relative;
+    top: 25%;
+    transition: all 0.5s;
+}
+.plusClose:hover .verticClose{
+ transform: rotate(45deg);   
+}
+.plusClose:hover .horizClose{
+ transform: rotate(315deg);
+}
 /*----------------------
 --------SECTION-6-------
 -----------------------*/

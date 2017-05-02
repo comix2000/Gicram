@@ -171,7 +171,26 @@ var navbarHeight = $('header').outerHeight();
     lastScrollTop = st;
 }
 
+/*---------MENU-CLICK-------*/
+    
+$('#second-menu').click(function(){
+    
+    $('header').removeClass('nav-up').addClass('nav-down');
+    $('#logo').removeClass('logo-up').addClass('logo-down');
 
+    $('ul.first-menu').removeClass('first-menu-up').addClass('first-menu-down');
+    $('#second-menu').removeClass('second-menu-up').addClass('second-menu-down');
+    
+});  
+/*---------ACTU-CLICK-OVERLAY------*/    
+    $('.actu-warper ').click(function(){
+        $('#overlay').fadeIn();
+    });
+    $('.plusClose ').click(function(){
+        $('#overlay').fadeOut();
+    });
+    
+   
 /*
 ------------------------------
 -------------SLIDER-----------
