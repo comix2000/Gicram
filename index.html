@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/jquery.easing.1.3.js"></script>
@@ -22,8 +23,6 @@
     <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.core.js"></script>
     <script src="http://jquery-ui.googlecode.com/svn/tags/latest/ui/jquery.effects.slide.js"></script>
-
-
 
 </head>
 
@@ -61,81 +60,44 @@
     <!----SECTION-2----->
     <section class="section-dernieres-operations">
 
-        <h1>Dernières<br>Opérations</h1>
+        <h1 id="title_1">Dernières<br>Opérations</h1>
 
 
         <div id="marteau-warper" class="drawAnim">
 
-            <svg version="1.1" id="marteau" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="547.6px" height="153.7px" viewBox="0 0 547.6 153.7" style="enable-background:new 0 0 547.6 153.7;"
-                xml:space="preserve">
+            <svg version="1.1"
+                 id="marteau"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                 x="0px" y="0px" width="331.6px" height="66.4px" viewBox="0 0 331.6 66.4" style="enable-background:new 0 0 331.6 66.4;"
+                 xml:space="preserve">
             <style type="text/css">
-                .st0{fill:none;stroke:#404040;stroke-width:2.8751;stroke-miterlimit:10;}
-                .st1{fill:none;stroke:#404040;stroke-width:2.8751;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-                .st2{fill:none;stroke:#404040;stroke-width:3;stroke-miterlimit:10;}
+                .st0{fill:none;stroke:#404040;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                .st1{fill:none;stroke:#404040;stroke-width:2;stroke-miterlimit:10;}
             </style>
             <defs>
             </defs>
-            <line id="XMLID_1_" class="st2" x1="0" y1="152.2" x2="387" y2="152.2"/>
-            <path id="XMLID_23_" class="st0" d="M415.6,10.9c0,0,14-24.1,82,4.7l-0.2,3.3c0,0-24.8-5.9-37.3-3.9l-8.4,1.3c0,0-2.4,0.3-0.8,2.9
-                s11.6,19,11.6,19l-12.2,9.9c0,0-12.8-10.5-15.8-11.5c-2.9-0.9-10.6,1.3-13.2,6.8s-4.2,11-4.2,11l-2.9,2.4l-2.9-0.8l-19.6-23.9
-                l-0.2-2.2l4.5-3.7c0,0,11-1.2,12.6-2.3C410.2,22.9,417.3,17.3,415.6,10.9z"/>
-            <rect id="XMLID_22_" x="456.1" y="54" transform="matrix(-0.6338 -0.7735 0.7735 -0.6338 723.3051 466.0576)" class="st0" width="31.7" height="15.6"/>
-            <path id="XMLID_21_" class="st0" d="M530.1,152.4"/>
-            <path id="XMLID_20_" class="st0" d="M547.6,138"/>
-            <path id="XMLID_19_" class="st0" d="M397.8,26.1c0,0,0.2,3.3,1.6,5c1.4,1.7,4.1,2.3,4.1,2.3s-0.6,2.3,2.7,6s5.9,4.1,5.9,4.1
-                s-0.6,2.7,1.5,4.9s4.7,2.6,4.7,2.6"/>
-            <polyline id="XMLID_18_" class="st0" points="412.1,43.6 425.9,29.3 420.6,22.9 403.4,33.4 "/>
-            <path id="XMLID_17_" class="st0" d="M459.1,40.5c0,0-14.3-13.9-19.5-14.1s-13.8,2.9-13.8,2.9"/>
-            <polygon id="XMLID_16_" class="st1" points="529.2,148.4 519.3,145.3 544.2,124.8 545.3,135.1 "/>
-            <line id="XMLID_15_" class="st0" x1="420.6" y1="22.9" x2="415.8" y2="11.3"/>
-            <path id="XMLID_14_" class="st0" d="M488.6,68.7l-13.4,11c0,0,0.2,8.1,11.9,22.3c11.6,14.2,30.2,41.3,32.3,43.2l24.9-20.4
-                c-1.4-2.5-24.4-26-36-40.2c-11.6-14.2-19.5-16-19.5-16l-13.4,11"/>
-            <rect id="XMLID_13_" x="455" y="38.3" transform="matrix(-0.6285 -0.7778 0.7778 -0.6285 711.7415 432.5668)" class="st0" width="8.4" height="16.1"/>
+            <line id="XMLID_16_" class="st1" x1="0" y1="30.9" x2="196" y2="30.9"/>
+            <path id="XMLID_27_" class="st0" d="M330.2,23.2c0,0,6.9,18.1-38.5,42.2l-1.7-1.5c0,0,14.1-10.8,18.5-18.4l3-5.1
+                c0,0,0.9-1.4-1.2-1.7c-2.1-0.3-15.4-2.1-15.4-2.1l0-10.9c0,0,11.3-2.3,13.1-3.5c1.8-1.2,3.9-6.3,2.1-10.1S306.1,5,306.1,5l0-2.6
+                l1.7-1.2L329.2,1l1.3,0.9l0,4c0,0-4.2,6.5-4.3,7.8S326,21.3,330.2,23.2z"/>
+            <rect id="XMLID_26_" x="267" y="25.9" transform="matrix(-1 4.384813e-03 -4.384813e-03 -1 556.206 61.3881)" class="st0" width="22" height="10.9"/>
+            <path id="XMLID_25_" class="st1" d="M203.6,23.5"/>
+            <path id="XMLID_24_" class="st1" d="M203.8,39.2"/>
+            <path id="XMLID_23_" class="st0" d="M329.9,6.9c0,0-1.9-1.3-3.4-1.3c-1.5,0-3,1.2-3,1.2s-1-1.3-4.4-1.2c-3.5,0.2-4.8,1.4-4.8,1.4
+                s-1.2-1.5-3.3-1.4c-2.1,0.1-3.5,1.4-3.5,1.4"/>
+            <polyline id="XMLID_22_" class="st0" points="314.1,7 315.8,20.7 321.6,20.7 323.4,6.8 "/>
+            <path id="XMLID_21_" class="st0" d="M295.1,33.7c0,0,13.8-1.6,16.2-4.3c2.3-2.7,4.5-8.7,4.5-8.7"/>
+            <polygon id="XMLID_20_" class="st0" points="206.2,24.3 212.2,20.3 212.3,42.7 206.3,38.8 "/>
+            <line id="XMLID_19_" class="st0" x1="321.6" y1="20.7" x2="329.9" y2="23.2"/>
+            <path id="XMLID_18_" class="st0" d="M267,37.3l-0.1-12c0,0-4.5-3.4-17.2-3.4c-12.7,0.1-35.5-1.8-37.5-1.5l0.1,22.4
+                c1.9,0.3,24.7-1.8,37.5-1.8c12.7-0.1,17.2-3.5,17.2-3.5l-0.1-12"/>
+            <rect id="XMLID_17_" x="289" y="25.6" transform="matrix(-1 -2.481370e-03 2.481370e-03 -1 583.8765 63.0521)" class="st0" width="5.9" height="11.2"/>
             </svg>
+
         </div>
 
     </section>
 
-    <!----SECTION-3----->
-<section>
-        <h1 id="title_1">Dernières<br>Opérations</h1>
-       
-
-     <div id="marteau-warper" class="drawAnim">
-        <svg version="1.1"
-             id="marteau"
-             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-             x="0px" y="0px" width="331.6px" height="66.4px" viewBox="0 0 331.6 66.4" style="enable-background:new 0 0 331.6 66.4;"
-             xml:space="preserve">
-        <style type="text/css">
-            .st0{fill:none;stroke:#404040;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-            .st1{fill:none;stroke:#404040;stroke-width:2;stroke-miterlimit:10;}
-        </style>
-        <defs>
-        </defs>
-        <line id="XMLID_16_" class="st1" x1="0" y1="30.9" x2="196" y2="30.9"/>
-        <path id="XMLID_27_" class="st0" d="M330.2,23.2c0,0,6.9,18.1-38.5,42.2l-1.7-1.5c0,0,14.1-10.8,18.5-18.4l3-5.1
-            c0,0,0.9-1.4-1.2-1.7c-2.1-0.3-15.4-2.1-15.4-2.1l0-10.9c0,0,11.3-2.3,13.1-3.5c1.8-1.2,3.9-6.3,2.1-10.1S306.1,5,306.1,5l0-2.6
-            l1.7-1.2L329.2,1l1.3,0.9l0,4c0,0-4.2,6.5-4.3,7.8S326,21.3,330.2,23.2z"/>
-        <rect id="XMLID_26_" x="267" y="25.9" transform="matrix(-1 4.384813e-03 -4.384813e-03 -1 556.206 61.3881)" class="st0" width="22" height="10.9"/>
-        <path id="XMLID_25_" class="st1" d="M203.6,23.5"/>
-        <path id="XMLID_24_" class="st1" d="M203.8,39.2"/>
-        <path id="XMLID_23_" class="st0" d="M329.9,6.9c0,0-1.9-1.3-3.4-1.3c-1.5,0-3,1.2-3,1.2s-1-1.3-4.4-1.2c-3.5,0.2-4.8,1.4-4.8,1.4
-            s-1.2-1.5-3.3-1.4c-2.1,0.1-3.5,1.4-3.5,1.4"/>
-        <polyline id="XMLID_22_" class="st0" points="314.1,7 315.8,20.7 321.6,20.7 323.4,6.8 "/>
-        <path id="XMLID_21_" class="st0" d="M295.1,33.7c0,0,13.8-1.6,16.2-4.3c2.3-2.7,4.5-8.7,4.5-8.7"/>
-        <polygon id="XMLID_20_" class="st0" points="206.2,24.3 212.2,20.3 212.3,42.7 206.3,38.8 "/>
-        <line id="XMLID_19_" class="st0" x1="321.6" y1="20.7" x2="329.9" y2="23.2"/>
-        <path id="XMLID_18_" class="st0" d="M267,37.3l-0.1-12c0,0-4.5-3.4-17.2-3.4c-12.7,0.1-35.5-1.8-37.5-1.5l0.1,22.4
-            c1.9,0.3,24.7-1.8,37.5-1.8c12.7-0.1,17.2-3.5,17.2-3.5l-0.1-12"/>
-        <rect id="XMLID_17_" x="289" y="25.6" transform="matrix(-1 -2.481370e-03 2.481370e-03 -1 583.8765 63.0521)" class="st0" width="5.9" height="11.2"/>
-       
-        </svg>
-
-            
-     </div>
-        
-    </section>
     <!----SECTION-3----->
     <section class="section-dernieres-operations-slider">
         <div class="slideshow-container">
@@ -208,31 +170,48 @@
         
     </section>
     <!----SECTION-5----->
-    <section class="section-temoin">
-        
+        <section class="section-temoin">
         <div class="slideshow-container">
-            <div class="slides fade">
+            <div class="slides actived-slide">
                 <div class="slider-infos">
-                    <h2>Nom Prénom</h2>
+                    <h2>José Juan</h2>
                     <hr size="2" width="200" align="left" noshade>
                     <h4>2017 — Date — Lieux — Nombre</h4>
                 </div>
-                <div id="img1" class="slide-image">
-                    <!--<img src="img/img_1.jpg">-->
+                <div id="img1" class="slide-image" style="background-image: url('img/temoin_1.png');">
                 </div>
             </div>
-            <div class="slides fade">
+            <div class="slides">
                 <div class="slider-infos">
-                    <h2>slide 2 Logistic</h2>
+                    <h2>Pablo Neruda</h2>
                     <hr size="2" width="200" align="left" noshade>
                     <h4>2017 — Date — Lieux — Nombre</h4>
                 </div>
-                <div id="img2" class="slide-image">
-                    <!--<img src="img/img_2.jpg">-->
+                <div id="img2" class="slide-image" style="background-image: url('img/temoin_2.png');">
                 </div>
             </div>
+            <div class="slides">
+                <div class="slider-infos">
+                    <h2>William Shakespeare</h2>
+                    <hr size="2" width="200" align="left" noshade>
+                    <h4>2017 — Date — Lieux — Nombre</h4>
+                </div>
+                
+                <div id="img3" class="slide-image" style="background-image: url('img/temoin_1.png');">
+                    <div class="quotes">Hello I'm Willy and I'm fun</div>
+                </div>
+            </div>
+
+            <!-----ARROWS----->
+            <div class="arrow-prev arrows" data-direction="right"></div>
+            <div class="arrow-next arrows" data-direction="left"></div>
         </div>
-        
+
+        <!--DOTS DYNAMIQUE-->
+        <div id="dot-warper" style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
     </section>
 
 <!----SECTION-6----->    
